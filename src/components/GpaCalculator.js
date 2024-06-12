@@ -24,7 +24,7 @@ const departmentSubjects = {
     { code: "HS2401", name: "Tamils and Technology", credits: 1 },
   ],
   "AI&DS": [
-    { code: "MA2401", name: "Discrete Mathematics", credits: 3 },
+    { code: "MA2401", name: "Discrete Mathematics", credits: 3},
     { code: "AD2401", name: "Operating System", credits: 4 },
     { code: "AD2402", name: "Machine Learning", credits: 4 },
     { code: "AD2403", name: "Computer Networks", credits: 4 },
