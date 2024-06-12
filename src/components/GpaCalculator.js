@@ -112,10 +112,9 @@ const GpaCalculator = () => {
   };
 
   return (
-    <Container className="container">
+    <Container className="gpa-container">
       <Box className="title">
         <Typography variant="h4">GPA Calculator</Typography>
-        <Typography variant="subtitle1">By <strong>Rudhresh S</strong></Typography>
       </Box>
       <FormControl fullWidth margin="normal" className="form-control">
         <InputLabel>Select your department</InputLabel>
@@ -128,15 +127,25 @@ const GpaCalculator = () => {
         <FormHelperText>{department ? `Enter your grades for the following subjects in ${department} department:` : ''}</FormHelperText>
       </FormControl>
       {department && departmentSubjects[department].map(subject => (
-        <FormControl fullWidth margin="normal" className="form-control" key={subject.code}>
-          <InputLabel>{subject.name} ({subject.code})</InputLabel>
-          <Select value={grades[subject.code] || ''} onChange={(e) => handleGradeChange(subject.code, e)}>
-            <MenuItem value="">Select</MenuItem>
-            {Object.keys(gradeToPoint).map(grade => (
-              <MenuItem key={grade} value={grade}>{grade}</MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+        
+<FormControl variant="outlined" fullWidth margin="normal" className="form-control">
+  <InputLabel>{subject.name} ({subject.code})</InputLabel>
+  <Select
+    value={grades[subject.code] || ''}
+    onChange={(e) => handleGradeChange(subject.code, e)}
+    label={`${subject.name} (${subject.code})`}
+  >
+    <MenuItem value="">Select</MenuItem>
+    {Object.keys(gradeToPoint).map(grade => (
+      <MenuItem key={grade} value={grade}>{grade}</MenuItem>
+    ))}
+  </Select>
+</FormControl>
+
+
+
+
+
       ))}
       {error && <Typography className="error">{error}</Typography>}
       <Box textAlign="center" my={2}>
