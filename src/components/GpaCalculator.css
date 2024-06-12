@@ -1,0 +1,35 @@
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  .form-control {
+    margin-bottom: 20px;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .gpa {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
