@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { CssBaseline, Container, AppBar, Toolbar, Typography, Box } from '@mui/material';
+import { CssBaseline, Container, AppBar, Toolbar, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import GpaCalculator from './components/GpaCalculator';
 import CgpaCalculator from './components/CgpaCalculator';
